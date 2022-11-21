@@ -7,7 +7,7 @@ import modelo.IIngressoDAO;
 
 public class IngressoDAO implements IIngressoDAO {
 
-	private static ArrayList<Ingresso> tabelaIngressos = new ArrayList<>();
+	private static ArrayList<Ingresso> tabelaIngressos;
 	private static IngressoDAO instancia;
 
 	private IngressoDAO() {
@@ -33,10 +33,10 @@ public class IngressoDAO implements IIngressoDAO {
 	}
 
 	@Override
-	public boolean atualizar(Ingresso f) {
-		
+	public boolean atualizar(Ingresso i, int codIngresso) {
 		for (Ingresso ingresso : tabelaIngressos) {
-			if (ingresso.getCodIngresso() == ingresso.getCodIngresso()) {
+
+			if (ingresso.getCodIngresso() == codIngresso) {
 				ingresso.setCodIngresso(ingresso.getCodIngresso());
 				return true;
 			}
@@ -45,8 +45,14 @@ public class IngressoDAO implements IIngressoDAO {
 	}
 
 	@Override
-	public boolean excluir(Ingresso ingresso) {
-		// TODO Auto-generated method stub
+	public boolean excluir(Ingresso i, int codIngresso) {
+		for (Ingresso ingresso : tabelaIngressos) {
+
+			if (ingresso.getCodIngresso() == codIngresso) {
+				tabelaIngressos.remove(ingresso);
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -54,4 +60,5 @@ public class IngressoDAO implements IIngressoDAO {
 	public ArrayList<Ingresso> listarIngressos() {
 		return tabelaIngressos;
 	}
+
 }

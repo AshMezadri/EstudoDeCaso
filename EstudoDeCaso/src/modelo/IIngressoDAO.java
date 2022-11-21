@@ -6,9 +6,9 @@ public interface IIngressoDAO {
 	
 	public boolean inserir(Ingresso ingresso);
 	
-	public boolean atualizar(Ingresso ingresso);
+	public boolean atualizar(Ingresso ingresso, int codIngresso);
 
-	public boolean excluir(Ingresso ingresso);
+	public boolean excluir(Ingresso ingresso, int codIngresso);
 	
 	public ArrayList<Ingresso> listarIngressos();
 }

@@ -1,65 +1,51 @@
 package modelo;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 public class Sessao {
 
-	private Integer numeroSala;
-	private char fileira;
-	private Integer cadeira;
-	private LocalDate dia;
-	private LocalDateTime horario;
-	private String filmeEscolhido;
-	
-	
-	public Integer getNumeroSala() {
-		return numeroSala;
-	}
-	public void setNumeroSala(Integer numeroSala) {
-		this.numeroSala = numeroSala;
-	}
-	
-	
-	public char getFileira() {
-		return fileira;
-	}
-	public void setFileira(char fileira) {
-		this.fileira = fileira;
-	}
-	
-	
-	public Integer getCadeira() {
-		return cadeira;
-	}
-	public void setCadeira(Integer cadeira) {
-		this.cadeira = cadeira;
-	}
-	
-	
-	public LocalDate getDia() {
-		return dia;
-	}
-	public void setDia(LocalDate dia) {
-		this.dia = dia;
-	}
-	
-	
-	public LocalDateTime getHorario() {
-		return horario;
-	}
-	public void setHorario(LocalDateTime horario) {
-		this.horario = horario;
-	}
-	
-	
-	public String getFilmeEscolhido() {
-		return filmeEscolhido;
-	}
-	public void setFilmeEscolhido(String filmeEscolhido) {
-		this.filmeEscolhido = filmeEscolhido;
-	}
-	
-	
-	
+    private Integer codSessao;
+    private Integer numeroSala;
+    private Filme filme;
+    private Integer quantIngressoDisponivel;
+
+    public Sessao(Integer codSessao, Integer numeroSala, Filme filme, Integer quantIngressoDisponivel) {
+        this.codSessao = codSessao;
+        this.numeroSala = numeroSala;
+        this.filme = filme;
+        this.quantIngressoDisponivel = quantIngressoDisponivel;
+    }
+
+    public Sessao() {
+    }
+
+    public Integer getCodSessao() {
+        return codSessao;
+    }
+
+    public void setCodSessao(Integer codSessao) {
+        this.codSessao = codSessao;
+    }
+
+    public Integer getNumeroSala() {
+        return numeroSala;
+    }
+
+    public void setNumeroSala(Integer numeroSala) {
+        this.numeroSala = numeroSala;
+    }
+
+    public Filme getFilme() {
+        return filme;
+    }
+
+    public void setFilme(Filme filme) {
+        this.filme = filme;
+    }
+
+    public Integer getQuantIngressoDisponivel() {
+        return quantIngressoDisponivel;
+    }
+
+    public void setQuantIngressoDisponivel(Integer quantIngressoDisponivel) {
+        this.quantIngressoDisponivel = quantIngressoDisponivel;
+    }
 }

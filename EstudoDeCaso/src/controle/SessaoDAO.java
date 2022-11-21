@@ -81,7 +81,6 @@ public class SessaoDAO {
 	// select all
 
 	public ArrayList<Sessao> listaSessao() {
-
 		return this.tabelaSessao;
 	}
 }
